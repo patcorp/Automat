@@ -32,14 +32,17 @@ int main()
     //scanf("%d", &para);
     do{
 	scanf("%d", &para);
-	if(para != zuzahlen){
+	if(para <  zuzahlen){
         	printf("Noch %f zu zahlen\n", zuzahlen -= para);
+	}else if(para > zuzahlen){
+		printf("Rueckgeld: %d\n", para -= zuzahlen);
+		break;
 	}else{
 		break;
 	}
     }while(zuzahlen != 0);
 
-    printf("Danke!");
+    printf("Danke!\n");
 
     return 0;
 }
